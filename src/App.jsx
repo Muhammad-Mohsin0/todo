@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import NewTodoForm from "./NewTodoForm";
-import TodoList from "./TodoList";
+import NewTodoForm from "../src/Components/NewTodoForm";
+import TodoList from "../src/Components/TodoList";
 
 
 function App() {
@@ -47,13 +47,13 @@ function App() {
 
   
   return (
-    <>
+    <div className="container">
      <NewTodoForm onSubmit={addTodo}/>
      <h1 className="header">Todo List</h1>
      <TodoList todos={todos} 
      toggleTodo={toggleTodo} 
      deleteTodo={deleteTodo}/>
-    </>
+    </div>
   );
 }
 
